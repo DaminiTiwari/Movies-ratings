@@ -1,13 +1,19 @@
-import { combineReducers } from "@reduxjs/toolkit";
-import {keyReducer, moviesReducer, selectedMoviesReducer} from "./moviesReducer";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './styles/index.css';
+import App from './component/App';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 
+ReactDOM.render(
+  <React.StrictMode>
+  <Provider store={store} >
 
-const reducers = combineReducers({
-allMovies: moviesReducer,
-movie: selectedMoviesReducer,
-key:keyReducer
+    <App />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
-});
 
-export default reducers;
