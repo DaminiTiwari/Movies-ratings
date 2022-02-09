@@ -21,7 +21,7 @@ function MenuItem() {
     const fetchSingleMovie = async () => {
 
         const response = await axios
-            .get(`http://www.omdbapi.com/?i=${imdbID}&apikey=3e426a6f`)
+            .get(`http://www.omdbapi.com/?i=${imdbID}&apikey=KEY`)
             .catch((err) => {
                 console.log("error is : ", err);
             })
